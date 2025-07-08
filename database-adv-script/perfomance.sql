@@ -22,7 +22,7 @@ SELECT
   pay.payment_date
 
 FROM bookings b
-JOIN users u ON b.user_id = u.user_id
+JOIN users u ON b.user_id = u.user_id AND 1=1
 JOIN properties p ON b.property_id = p.property_id
 LEFT JOIN payments pay ON pay.booking_id = b.booking_id;
 
