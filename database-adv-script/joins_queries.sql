@@ -22,7 +22,8 @@ SELECT
   r.rating,
   r.comment
 FROM properties p
-LEFT JOIN reviews r ON p.property_id = r.property_id;
+LEFT JOIN reviews r ON p.property_id = r.property_id
+ORDER BY p.property_id, r.review_id;
 
 -- FULL OUTER JOIN, Get all users and all bookings, even if a user has no booking or a booking isn’t linked to a user.
 -- It works in PostgreSQL. If you're on MySQL, simulate it using UNION of LEFT JOIN and RIGHT JOIN.
